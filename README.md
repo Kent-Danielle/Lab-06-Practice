@@ -7,6 +7,7 @@ The basic idea is: you have a `Player` and `Enemies`. The `Player` can only eat 
 
 ## TODO 1: Implement the following UML Diagram
 Your code must, at a minimum, implement the following UML Diagram. You are free at add methods, attributes, super/subclasses, but whatever you add shouldn't violate the basic structure shown here. Don't worry about the inner logic yet, just focus on the structure.
+![UML Diagram](https://github.com/COMP2522/Lab-06/blob/d10ddea13ec06c2603b21b89b0e049fe5df921ab/gfx/Lab06.drawio.png)
 
 ## TODO 2: Make the `Player` a Singleton.
 Make the `Player` follow the [Singleton](https://en.wikipedia.org/wiki/Singleton_pattern) design pattern. This ensures that there is only ever one copy of the `Player` on screen.
