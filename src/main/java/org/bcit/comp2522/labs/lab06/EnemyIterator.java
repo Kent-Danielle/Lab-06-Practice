@@ -10,7 +10,7 @@ public class EnemyIterator implements Iterator {
 
   @Override
   public Enemy next() {
-    return new Enemy();
+    return null;
   }
 
 }
