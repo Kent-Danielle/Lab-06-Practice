@@ -15,6 +15,11 @@ import java.util.Random;
  * @version 1.0
  */
 public class Window extends PApplet {
+  Player player;
+
+  EnemyCollection<Enemy> Enemies;
+
+
   /**
    * Runs before applet starts.
    */

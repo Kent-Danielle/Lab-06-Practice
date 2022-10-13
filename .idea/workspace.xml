@@ -5,77 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6276358-a8a8-4cd8-8e7a-52fa20620000" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gfx/Lab06.drawio.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/DepthSort.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/core.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/fenster.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/gluegen-rt.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/gluegen_rt.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/jogl-all.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/jogl_desktop.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/jogl_mobile.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/linux-aarch64/libgluegen_rt.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/linux-aarch64/libjogl_desktop.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/linux-aarch64/libjogl_mobile.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/linux-aarch64/libnativewindow_awt.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/linux-aarch64/libnativewindow_drm.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/linux-aarch64/libnativewindow_x11.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/linux-aarch64/libnewt_drm.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/linux-aarch64/libnewt_head.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/linux-amd64/libgluegen_rt.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/linux-amd64/libjogl_desktop.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/linux-amd64/libjogl_mobile.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/linux-amd64/libnativewindow_awt.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/linux-amd64/libnativewindow_drm.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/linux-amd64/libnativewindow_x11.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/linux-amd64/libnewt_drm.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/linux-amd64/libnewt_head.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/linux-arm/libgluegen_rt.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/linux-arm/libjogl_desktop.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/linux-arm/libjogl_mobile.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/linux-arm/libnativewindow_awt.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/linux-arm/libnativewindow_drm.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/linux-arm/libnativewindow_x11.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/linux-arm/libnewt_drm.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/linux-arm/libnewt_head.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/macos-aarch64/libgluegen_rt.dylib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/macos-aarch64/libjogl_desktop.dylib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/macos-aarch64/libjogl_mobile.dylib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/macos-aarch64/libnativewindow_awt.dylib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/macos-aarch64/libnativewindow_macosx.dylib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/macos-aarch64/libnewt_head.dylib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/macos-x86_64/libgluegen_rt.dylib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/macos-x86_64/libjogl_desktop.dylib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/macos-x86_64/libjogl_mobile.dylib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/macos-x86_64/libnativewindow_awt.dylib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/macos-x86_64/libnativewindow_macosx.dylib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/macos-x86_64/libnewt_head.dylib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/nativewindow_awt.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/nativewindow_win32.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/newt_head.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/windows-amd64/fenster.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/windows-amd64/gluegen_rt.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/windows-amd64/jogl_desktop.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/windows-amd64/jogl_mobile.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/windows-amd64/nativewindow_awt.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/windows-amd64/nativewindow_win32.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/windows-amd64/newt_head.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/bcit/comp2522/labs/lab06/Window.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/bcit/comp2522/labs/lab06/Enemy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/bcit/comp2522/labs/lab06/EnemyCollection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/bcit/comp2522/labs/lab06/EnemyIterator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/bcit/comp2522/labs/lab06/Observable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/bcit/comp2522/labs/lab06/Observer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/bcit/comp2522/labs/lab06/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bcit/comp2522/labs/lab06/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bcit/comp2522/labs/lab06/Window.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,6 +28,17 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindBugs-IDEA-Workspace">
+    <toolWindowEditorPreview>false</toolWindowEditorPreview>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -108,12 +58,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/paul_bucci/IdeaProjects/Week 04/LL-04"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/paul_bucci/IdeaProjects/Week 04/LL-04&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\paul_bucci\IdeaProjects\Week 05\Lab-06" />
@@ -153,8 +108,14 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1665009696785</updated>
+      <workItem from="1665281134508" duration="2534000" />
+      <workItem from="1665616066371" duration="1826000" />
+      <workItem from="1665639780193" duration="2176000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
