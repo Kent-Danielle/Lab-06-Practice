@@ -1,9 +1,16 @@
 package org.bcit.comp2522.labs.lab06;
 
-public abstract class Observable {
-  void registerObserver(Observer o) {};
+import java.awt.Color;
+import processing.core.PVector;
 
-  void deregisterObserver(Observer o) {};
+public class Observable extends AbstractCharacter {
 
-  void notifyObservers() {};
+  public Observable(PVector pin, PVector dir, float din, Color cin, Window win) {
+    super(pin, dir, din, cin, win);
+  }
+  void registerObserver(Observer o) {}
+
+  void unregisterObserver(Observer o) {}
+
+  void notifyObservers() {}
 }

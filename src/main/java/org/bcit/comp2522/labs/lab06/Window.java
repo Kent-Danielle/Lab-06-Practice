@@ -3,6 +3,7 @@ package org.bcit.comp2522.labs.lab06;
 import processing.core.PApplet;
 import processing.core.PVector;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -16,16 +17,16 @@ import java.util.Random;
  * @version 1.0
  */
 public class Window extends PApplet {
+
   private final int numEnemies = 10;
+
   private final float charDiameter = 10f;
+
   private Player player;
 
-  private EnemyCollection<Enemy> Enemies;
-  private ArrayList<IDrawable> drawables = new ArrayList<>();
+  private EnemyCollection<Enemy> enemies = new EnemyCollection<Enemy>();
 
-
-
-
+  private ArrayList<AbstractCharacter> characters = new ArrayList<>();
 
   /**
    * Runs before applet starts.
@@ -34,17 +35,29 @@ public class Window extends PApplet {
     // Init player as Singleton
     PVector playerPos = new PVector(width / 2f, height / 2f);
     PVector playerDir = new PVector(1, 1).normalize();
-    player = Player.getInstance(playerPos, playerDir, charDiameter, this);
-    addDrawable(player);
+    Color playerColor = new Color(0, 255,255);
+    Player player = Player.getInstance(playerPos, playerDir, charDiameter, playerColor, this);
+    addPlayer(player);
 
 
     // Init enemies
+    Color enemyColor = new Color(255, 0, 0);
     for (int i = 0; i < numEnemies; i++) {
       PVector enemyPos = new PVector(random(width), random(height));
       PVector enemyDir = new PVector(random(-1f, 1f), random(-1f, 1f)).normalize();
-      Enemy enemy = new Enemy(enemyPos, enemyDir, charDiameter, this);
-      addDrawable(enemy);
+      Enemy enemy = new Enemy(enemyPos, enemyDir, charDiameter, enemyColor, this);
+      addEnemy(enemy);
     }
+  }
+
+  public void addPlayer(Player player) {
+    this.player = player;
+    characters.add(player);
+  }
+
+  public void addEnemy(Enemy enemy) {
+    enemies.add(enemy);
+    characters.add(enemy);
   }
 
   /**
@@ -52,19 +65,16 @@ public class Window extends PApplet {
    */
   public void draw() {
     background(0);
-    for (IDrawable d : drawables) {
-      d.draw();
+    for (AbstractCharacter c : characters) {
+      c.move();
+      c.draw();
     }
+    player.redirect();
   }
 
   public void settings() {
     size(640, 360);
   }
-
-  public void addDrawable(IDrawable d) {
-    drawables.add(d);
-  }
-
 
   /**
    * Main function.

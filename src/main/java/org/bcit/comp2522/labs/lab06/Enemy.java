@@ -1,33 +1,17 @@
 package org.bcit.comp2522.labs.lab06;
 
+import processing.core.PApplet;
 import processing.core.PVector;
 
-import java.awt.Color;
+import java.awt.*;
 
-public class Enemy extends Observer implements Comparable, IDrawable{
-  private final Color color = new Color(255, 0, 0);
-  private PVector position;
+public class Enemy extends Observer implements Comparable{
 
-  private PVector direction;
-  private float diameter;
-  private Window window;
-
-  public Enemy(PVector pin, PVector din, float diameter, Window window) {
-    this.position = pin;
-    this.direction = din;
-    this.diameter = diameter;
-    this.window = window;
+  public Enemy(PVector pin, PVector dir, float din, Color cin, Window win) {
+    super(pin, dir, din, cin, win);
   }
 
-  public void move() {}
-  @Override
-  public void draw() {
-    window.fill(color.getRed(), color.getGreen(), color.getBlue());
-    this.window.rect(position.x, position.y, diameter, diameter);
-  }
-
-  @Override
-  public void update(Object msg) {}
+  public void update(Object msg) {};
 
   @Override
   public int compareTo(Object o) {

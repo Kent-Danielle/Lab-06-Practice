@@ -2,55 +2,33 @@ package org.bcit.comp2522.labs.lab06;
 
 import processing.core.PVector;
 
-import java.awt.Color;
+import java.awt.*;
 
-public class Player extends Observable implements Comparable, IDrawable{
+public class Player extends Observable{
+
   private static Player player;
 
-  private final Color color = new Color(0, 200, 255);
-  private PVector position;
-
-  private PVector direction;
-
-  private float diameter;
-
-  private Window window;
-  private Player(PVector pin, PVector din, float diameter, Window window) {
-    this.position = pin;
-    this.direction = din;
-    this.diameter = diameter;
-    this.window = window;
+  private Player(PVector pin, PVector dir, float din, Color cin, Window win) {
+    super(pin, dir, din, cin, win);
   }
 
-  public static Player getInstance(PVector pin, PVector din, float diameter, Window window) {
+  public static Player getInstance(PVector playerPos, PVector playerDir, float charDiameter, Color playerColor, Window window) {
     if (player == null) {
-      return new Player(pin, din, diameter, window);
+      player = new Player(playerPos, playerDir, charDiameter, playerColor, window);
     }
+
     return player;
   }
-  public static Player getInstance() {
-    return player;
+
+  public void redirect() {
+    PVector mousePos = new PVector(this.window.mouseX, this.window.mouseY);
+    PVector playerPos = new PVector(this.position.x, this.position.y);
+    this.direction = mousePos.add(playerPos.mult(-1f)).normalize();
   }
 
-  public void move() {}
-
-  @Override
-  public void draw() {
-    window.fill(color.getRed(), color.getGreen(), color.getBlue());
-    this.window.ellipse(position.x, position.y, diameter, diameter);
-  }
-
-  @Override
   public void registerObserver(Observer o) {}
 
-  @Override
-  public void deregisterObserver(Observer o) {}
+  public void unregisterObserver(Observer o) {}
 
-  @Override
   public void notifyObservers() {}
-
-  @Override
-  public int compareTo(Object o) {
-    return 0;
-  }
 }

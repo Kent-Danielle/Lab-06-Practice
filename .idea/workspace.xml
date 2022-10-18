@@ -4,16 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c6276358-a8a8-4cd8-8e7a-52fa20620000" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/bcit/comp2522/labs/lab06/Enemy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/bcit/comp2522/labs/lab06/EnemyCollection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/bcit/comp2522/labs/lab06/EnemyIterator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/bcit/comp2522/labs/lab06/Observable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/bcit/comp2522/labs/lab06/Observer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/bcit/comp2522/labs/lab06/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="c6276358-a8a8-4cd8-8e7a-52fa20620000" name="Changes" comment="Add new interface for draw() to draw Enemy and Player more efficiently">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/bcit/comp2522/labs/lab06/AbstractCharacter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bcit/comp2522/labs/lab06/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bcit/comp2522/labs/lab06/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bcit/comp2522/labs/lab06/EnemyCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bcit/comp2522/labs/lab06/EnemyCollection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bcit/comp2522/labs/lab06/EnemyIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bcit/comp2522/labs/lab06/EnemyIterator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bcit/comp2522/labs/lab06/IDrawable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bcit/comp2522/labs/lab06/Observable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bcit/comp2522/labs/lab06/Observable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bcit/comp2522/labs/lab06/Observer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bcit/comp2522/labs/lab06/Observer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bcit/comp2522/labs/lab06/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bcit/comp2522/labs/lab06/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/bcit/comp2522/labs/lab06/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bcit/comp2522/labs/lab06/Window.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +66,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/paul_bucci/IdeaProjects/Week 04/LL-04&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -110,8 +110,34 @@
       <updated>1665009696785</updated>
       <workItem from="1665281134508" duration="2534000" />
       <workItem from="1665616066371" duration="1826000" />
-      <workItem from="1665639780193" duration="2176000" />
+      <workItem from="1665639780193" duration="4392000" />
+      <workItem from="1665701783327" duration="1146000" />
+      <workItem from="1665768230582" duration="4868000" />
+      <workItem from="1666049157823" duration="3179000" />
+      <workItem from="1666063197701" duration="1282000" />
     </task>
+    <task id="LOCAL-00001" summary="Implement UML Class Diagram">
+      <created>1665642191618</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1665642191618</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Refactor Player to be a Singleton">
+      <created>1665642858513</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1665642858513</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add new interface for draw() to draw Enemy and Player more efficiently">
+      <created>1665644280440</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1665644280440</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,5 +153,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Implement UML Class Diagram" />
+    <MESSAGE value="Refactor Player to be a Singleton" />
+    <MESSAGE value="Add new interface for draw() to draw Enemy and Player more efficiently" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add new interface for draw() to draw Enemy and Player more efficiently" />
   </component>
 </project>
