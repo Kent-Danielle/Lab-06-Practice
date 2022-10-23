@@ -4,13 +4,13 @@ import processing.core.PVector;
 
 import java.awt.*;
 
-public abstract class AbstractCharacter {
+public abstract class AbstractCharacter implements Comparable<AbstractCharacter>, ICollidable {
   protected PVector position;
   protected PVector direction;
   protected float diameter;
   protected Color color;
   protected Window window;
-
+  protected float power = 1f;
   protected float speed = 1f;
 
   public AbstractCharacter(PVector pin, PVector dir, float din, Color cin, Window win) {
@@ -19,6 +19,11 @@ public abstract class AbstractCharacter {
     this.diameter = din;
     this.color = cin;
     this.window = win;
+  }
+
+  @Override
+  public int compareTo(AbstractCharacter c) {
+    return (int) (this.power - c.power);
   }
 
   public void move() {
@@ -47,6 +52,15 @@ public abstract class AbstractCharacter {
     }
   }
 
+  @Override
+  public boolean isCollided(ICollidable c) {
+    if (c == this) {
+      return false;
+    }
+    return c.getPosition().dist(this.position) <= (c.getDiameter() + this.diameter);
+  }
+
+  @Override
   public PVector getPosition() {
     return position;
   }
@@ -63,6 +77,7 @@ public abstract class AbstractCharacter {
     this.direction = direction;
   }
 
+  @Override
   public float getDiameter() {
     return diameter;
   }
@@ -79,4 +94,8 @@ public abstract class AbstractCharacter {
     this.color = color;
   }
 
+  @Override
+  public float getPower() { return power; }
+
+  public void setPower(float power) { this.power = power; }
 }

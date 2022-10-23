@@ -3,20 +3,20 @@ package org.bcit.comp2522.labs.lab06;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class EnemyCollection<Enemy> implements Iterable<Enemy>{
+public class EnemyCollection<T> implements Iterable<T> {
 
-  ArrayList<Enemy> list;
+  ArrayList<T> list;
 
   public EnemyCollection() {
-    this.list = new ArrayList<>();
+    this.list = new ArrayList<T>();
   }
 
-  public void add(Enemy enemy) {
+  public void add(T enemy) {
     this.list.add(enemy);
   }
 
   @Override
-  public EnemyIterator<Enemy> iterator() {
-    return new EnemyIterator(this.list);
+  public EnemyIterator<T> iterator() {
+    return new EnemyIterator<T>(this.list);
   }
 }

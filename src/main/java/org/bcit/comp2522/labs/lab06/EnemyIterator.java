@@ -2,28 +2,28 @@ package org.bcit.comp2522.labs.lab06;
 
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.function.Consumer;
 
-public class EnemyIterator<T> implements Iterator {
+public class EnemyIterator<T> implements Iterator<T> {
 
-  ArrayList<Enemy> list;
+  ArrayList<T> list;
 
   int currIndex;
 
-  public EnemyIterator(ArrayList<Enemy> list) {
+  public EnemyIterator(ArrayList<T> list) {
     this.list = list;
+    this.list.sort(null);
     currIndex = 0;
+    list.sort(null);
   }
-
   @Override
   public boolean hasNext() {
-    return 0 < list.size();
+    return currIndex < list.size();
   }
 
   @Override
-  public Enemy next() {
-    int temp = currIndex;
+  public T next() {
+    T temp = list.get(currIndex);
     this.currIndex++;
-    return list.get(temp);
+    return temp;
   }
 }

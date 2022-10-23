@@ -5,7 +5,9 @@ import processing.core.PVector;
 
 import java.awt.*;
 
-public class Enemy extends Observer implements Comparable{
+public class Enemy extends Observer {
+
+  private float distance;
 
   public Enemy(PVector pin, PVector dir, float din, Color cin, Window win) {
     super(pin, dir, din, cin, win);
@@ -14,7 +16,11 @@ public class Enemy extends Observer implements Comparable{
   public void update(Object msg) {};
 
   @Override
-  public int compareTo(Object o) {
-    return 0;
+  public void collideEffect(ICollidable c) {
+    if (this.power >= c.getPower()) {
+      // reset game
+    } else {
+      // disappear
+    }
   }
 }

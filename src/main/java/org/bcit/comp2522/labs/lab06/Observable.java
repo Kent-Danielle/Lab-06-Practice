@@ -3,7 +3,7 @@ package org.bcit.comp2522.labs.lab06;
 import java.awt.Color;
 import processing.core.PVector;
 
-public class Observable extends AbstractCharacter {
+public abstract class Observable extends AbstractCharacter {
 
   public Observable(PVector pin, PVector dir, float din, Color cin, Window win) {
     super(pin, dir, din, cin, win);

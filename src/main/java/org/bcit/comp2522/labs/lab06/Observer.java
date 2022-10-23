@@ -4,7 +4,7 @@ import processing.core.PVector;
 
 import java.awt.*;
 
-public class Observer extends AbstractCharacter{
+public abstract class Observer extends AbstractCharacter{
 
   public Observer(PVector pin, PVector dir, float din, Color cin, Window win) {
     super(pin, dir, din, cin, win);

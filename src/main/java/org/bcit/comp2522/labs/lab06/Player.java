@@ -4,7 +4,7 @@ import processing.core.PVector;
 
 import java.awt.*;
 
-public class Player extends Observable{
+public class Player extends Observable {
 
   private static Player player;
 
@@ -24,6 +24,15 @@ public class Player extends Observable{
     PVector mousePos = new PVector(this.window.mouseX, this.window.mouseY);
     PVector playerPos = new PVector(this.position.x, this.position.y);
     this.direction = mousePos.add(playerPos.mult(-1f)).normalize();
+  }
+
+  @Override
+  public void collideEffect(ICollidable c) {
+    if (this.power >= c.getPower()) {
+      // increase size
+    } else {
+      // reset game
+    }
   }
 
   public void registerObserver(Observer o) {}

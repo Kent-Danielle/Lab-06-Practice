@@ -5,6 +5,7 @@ import processing.core.PVector;
 
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Random;
 
 
@@ -46,6 +47,7 @@ public class Window extends PApplet {
       PVector enemyPos = new PVector(random(width), random(height));
       PVector enemyDir = new PVector(random(-1f, 1f), random(-1f, 1f)).normalize();
       Enemy enemy = new Enemy(enemyPos, enemyDir, charDiameter, enemyColor, this);
+      enemy.setPower(random(1,10));
       addEnemy(enemy);
     }
   }
