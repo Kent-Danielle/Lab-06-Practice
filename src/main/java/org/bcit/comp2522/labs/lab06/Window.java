@@ -27,7 +27,7 @@ public class Window extends PApplet {
   private ArrayList<AbstractCharacter> characters = new ArrayList<>();
   private ArrayList<ICollidable> collidables = new ArrayList<>();
   private Date lastPowerUptime;
-  private int powerUpInterval = 1000;
+  private int powerUpInterval = 5000;
   private boolean inGame = true;
 
   /**
@@ -39,7 +39,7 @@ public class Window extends PApplet {
     for (int i = 0; i < numEnemies; i++) {
       PVector enemyPos = new PVector(random(width), random(height));
       PVector enemyDir = new PVector(random(-1f, 1f), random(-1f, 1f)).normalize();
-      Enemy enemy = new Enemy(random(1,5), enemyPos, enemyDir, charDiameter, enemyColor, this);
+      Enemy enemy = new Enemy(1, enemyPos, enemyDir, charDiameter, enemyColor, this);
       addEnemy(enemy);
     }
     lastPowerUptime = new Date();
@@ -103,9 +103,15 @@ public class Window extends PApplet {
       if (now.getTime() - lastPowerUptime.getTime() > powerUpInterval) {
         lastPowerUptime = now;
         // TODO: Make up something so that the farther the enemy is on the iteration, the less power it receives
+        float x = 2f;
         for (Enemy e : enemies) {
-          e.powerGain(0.1f);
+          e.powerGain(x);
+          x /= 5f;
         }
+      }
+
+      for (Enemy e : enemies) {
+        e.updateDistanceMetric(player);
       }
 
       player.scanEnemies();
@@ -130,7 +136,7 @@ public class Window extends PApplet {
   }
 
   public void settings() {
-    size(640, 360);
+    size(1000, 1000);
   }
 
   public EnemyCollection<Enemy> getEnemies() {

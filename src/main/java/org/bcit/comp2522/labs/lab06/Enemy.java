@@ -7,8 +7,7 @@ import java.awt.*;
 
 public class Enemy extends Observer {
 
-  private float distance;
-  private float courageLevel = 3f;
+  private float distanceFromSource;
 
   public Enemy(float power, PVector pin, PVector dir, float din, Color cin, Window win) {
     super(power, pin, dir, din, cin, win);
@@ -22,6 +21,15 @@ public class Enemy extends Observer {
   public void chasePlayer(PVector pos) {
     PVector enemyPos = this.position.copy();
     this.direction = pos.add(enemyPos.mult(-1f)).normalize();
+  }
+
+  public void updateDistanceMetric(AbstractCharacter c) {
+    PVector sourcePos = c.getPosition().copy();
+    this.distanceFromSource = sourcePos.dist(this.position) - (this.diameter / 2f) - (c.getDiameter() / 2f);
+  }
+
+  public float getDistanceFromSource() {
+    return distanceFromSource;
   }
 
   @Override

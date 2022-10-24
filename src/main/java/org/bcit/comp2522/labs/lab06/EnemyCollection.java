@@ -3,19 +3,19 @@ package org.bcit.comp2522.labs.lab06;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class EnemyCollection<T> implements Iterable<T> {
+public class EnemyCollection<Enemy> implements Iterable<Enemy> {
 
-  ArrayList<T> list;
+  ArrayList<Enemy> list;
 
   public EnemyCollection() {
-    this.list = new ArrayList<T>();
+    this.list = new ArrayList<Enemy>();
   }
 
-  public void add(T enemy) {
+  public void add(Enemy enemy) {
     this.list.add(enemy);
   }
 
-  public void remove(T enemy) {
+  public void remove(Enemy enemy) {
     this.list.remove(enemy);
   }
 
@@ -26,7 +26,7 @@ public class EnemyCollection<T> implements Iterable<T> {
   public int length() {return this.list.size();}
 
   @Override
-  public EnemyIterator<T> iterator() {
-    return new EnemyIterator<T>(this.list);
+  public EnemyIterator<Enemy> iterator() {
+    return new EnemyIterator<Enemy>(this.list);
   }
 }
