@@ -5,8 +5,8 @@ import processing.core.PVector;
 
 public abstract class Observable extends AbstractCharacter {
 
-  public Observable(float power, PVector pin, PVector dir, float din, Color cin, Window win) {
-    super(power, pin, dir, din, cin, win);
+  public Observable(float speed, float power, PVector pin, PVector dir, float din, Color cin, Window win) {
+    super(speed, power, pin, dir, din, cin, win);
   }
   void registerObserver(Observer o) {}
 

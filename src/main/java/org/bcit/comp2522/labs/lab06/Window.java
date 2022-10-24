@@ -19,24 +19,15 @@ import java.util.Random;
  * @version 1.0
  */
 public class Window extends PApplet {
-
   private final int numEnemies = 10;
-
   private final float charDiameter = 10f;
-
   private Player player;
-
   private EnemyCollection<Enemy> enemies = new EnemyCollection<Enemy>();
-
   private EnemyCollection<Enemy> deadEnemies = new EnemyCollection<Enemy>();
-
   private ArrayList<AbstractCharacter> characters = new ArrayList<>();
   private ArrayList<ICollidable> collidables = new ArrayList<>();
-
   private Date lastPowerUptime;
-
-  private int powerUpInterval = 5000;
-
+  private int powerUpInterval = 1000;
   private boolean inGame = true;
 
   /**
@@ -55,10 +46,11 @@ public class Window extends PApplet {
 
     // Init player as Singleton
     float initPlayerPower = 3f;
+    float initPlayerSpd = 1.5f;
     PVector playerPos = new PVector(width / 2f, height / 2f);
     PVector playerDir = new PVector(1, 1).normalize();
     Color playerColor = new Color(0, 255,255);
-    Player player = Player.getInstance(initPlayerPower, playerPos, playerDir, charDiameter, playerColor, this);
+    Player player = Player.getInstance(initPlayerSpd, initPlayerPower, playerPos, playerDir, charDiameter, playerColor, this);
     addPlayer(player);
   }
 
@@ -112,9 +104,12 @@ public class Window extends PApplet {
         lastPowerUptime = now;
         // TODO: Make up something so that the farther the enemy is on the iteration, the less power it receives
         for (Enemy e : enemies) {
-          e.powerGain(0.2f);
+          e.powerGain(0.1f);
         }
       }
+
+      player.scanEnemies();
+      player.notifyObservers();
 
       for (AbstractCharacter c : characters) {
         c.move();
@@ -137,6 +132,11 @@ public class Window extends PApplet {
   public void settings() {
     size(640, 360);
   }
+
+  public EnemyCollection<Enemy> getEnemies() {
+    return enemies;
+  }
+
 
   /**
    * Main function.

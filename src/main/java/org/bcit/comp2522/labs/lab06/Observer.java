@@ -10,5 +10,5 @@ public abstract class Observer extends AbstractCharacter{
     super(power, pin, dir, din, cin, win);
   }
 
-    void update(PVector p) {};
+    void update(PVector p, float power) {};
 }

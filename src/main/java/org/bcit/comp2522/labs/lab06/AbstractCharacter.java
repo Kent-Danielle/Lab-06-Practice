@@ -23,6 +23,16 @@ public abstract class AbstractCharacter implements Comparable<AbstractCharacter>
     this.window = win;
   }
 
+  public AbstractCharacter(float speed, float power, PVector pin, PVector dir, float din, Color cin, Window win) {
+    this.speed = speed;
+    this.position = pin;
+    this.direction = dir;
+    this.power = power;
+    this.diameter = din + power;
+    this.color = cin;
+    this.window = win;
+  }
+
   @Override
   public int compareTo(AbstractCharacter c) {
     return (int) (this.power - c.power);
