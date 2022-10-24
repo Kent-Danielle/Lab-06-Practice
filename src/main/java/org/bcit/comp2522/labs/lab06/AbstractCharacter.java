@@ -10,13 +10,15 @@ public abstract class AbstractCharacter implements Comparable<AbstractCharacter>
   protected float diameter;
   protected Color color;
   protected Window window;
-  protected float power = 1f;
+  protected float power;
   protected float speed = 1f;
+  private final float maxDiameter = 100f;
 
-  public AbstractCharacter(PVector pin, PVector dir, float din, Color cin, Window win) {
+  public AbstractCharacter(float power, PVector pin, PVector dir, float din, Color cin, Window win) {
     this.position = pin;
     this.direction = dir;
-    this.diameter = din;
+    this.power = power;
+    this.diameter = din + power;
     this.color = cin;
     this.window = win;
   }
@@ -57,12 +59,23 @@ public abstract class AbstractCharacter implements Comparable<AbstractCharacter>
     if (c == this) {
       return false;
     }
-    return c.getPosition().dist(this.position) <= (c.getDiameter() + this.diameter);
+    return c.getPosition().dist(this.position) <= (c.getDiameter() / 2f + this.diameter / 2f);
   }
 
   @Override
   public PVector getPosition() {
     return position;
+  }
+
+  public void powerGain(float powerGainRate) {
+    this.power += powerGainRate;
+    this.evolve();
+  }
+
+  public void evolve() {
+    if (this.diameter <= maxDiameter) {
+      this.diameter =  this.diameter + this.power;
+    }
   }
 
   public void setPosition(PVector position) {

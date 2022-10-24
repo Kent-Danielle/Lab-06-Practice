@@ -9,18 +9,29 @@ public class Enemy extends Observer {
 
   private float distance;
 
-  public Enemy(PVector pin, PVector dir, float din, Color cin, Window win) {
-    super(pin, dir, din, cin, win);
+  public Enemy(float power, PVector pin, PVector dir, float din, Color cin, Window win) {
+    super(power, pin, dir, din, cin, win);
   }
 
-  public void update(Object msg) {};
+  public void chasePlayer(PVector pos){
+    PVector enemyPos = this.position.copy();
+    this.direction = (pos.add(enemyPos.mult(-1f)).mult(-1f)).normalize();
+  }
+
+  public void avoidPlayer(PVector pos) {
+    PVector enemyPos = this.position.copy();
+    this.direction = pos.add(enemyPos.mult(-1f)).normalize();
+  }
+
+  @Override
+  public void update(PVector p) {
+
+  };
 
   @Override
   public void collideEffect(ICollidable c) {
-    if (this.power >= c.getPower()) {
-      // reset game
-    } else {
-      // disappear
+    if (c instanceof Player && c.getPower() > this.power) {
+      window.addDeadEnemyQueue(this);
     }
   }
 }

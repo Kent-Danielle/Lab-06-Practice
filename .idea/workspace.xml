@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c6276358-a8a8-4cd8-8e7a-52fa20620000" name="Changes" comment="Add new interface for draw() to draw Enemy and Player more efficiently">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/bcit/comp2522/labs/lab06/AbstractCharacter.java" afterDir="false" />
+    <list default="true" id="c6276358-a8a8-4cd8-8e7a-52fa20620000" name="Changes" comment="Implement TODO 6">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bcit/comp2522/labs/lab06/AbstractCharacter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bcit/comp2522/labs/lab06/AbstractCharacter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/bcit/comp2522/labs/lab06/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bcit/comp2522/labs/lab06/Enemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/bcit/comp2522/labs/lab06/EnemyCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bcit/comp2522/labs/lab06/EnemyCollection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/bcit/comp2522/labs/lab06/EnemyIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bcit/comp2522/labs/lab06/EnemyIterator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/bcit/comp2522/labs/lab06/IDrawable.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/bcit/comp2522/labs/lab06/Observable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bcit/comp2522/labs/lab06/Observable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/bcit/comp2522/labs/lab06/Observer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bcit/comp2522/labs/lab06/Observer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/bcit/comp2522/labs/lab06/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bcit/comp2522/labs/lab06/Player.java" afterDir="false" />
@@ -32,8 +30,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -114,7 +112,11 @@
       <workItem from="1665701783327" duration="1146000" />
       <workItem from="1665768230582" duration="4868000" />
       <workItem from="1666049157823" duration="3179000" />
-      <workItem from="1666063197701" duration="1282000" />
+      <workItem from="1666063197701" duration="3961000" />
+      <workItem from="1666115470439" duration="2661000" />
+      <workItem from="1666465791384" duration="10510000" />
+      <workItem from="1666490293678" duration="541000" />
+      <workItem from="1666584499781" duration="283000" />
     </task>
     <task id="LOCAL-00001" summary="Implement UML Class Diagram">
       <created>1665642191618</created>
@@ -137,7 +139,21 @@
       <option name="project" value="LOCAL" />
       <updated>1665644280440</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added AbstractCharacter and implemented moving for player">
+      <created>1666064528916</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1666064528916</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Implement TODO 6">
+      <created>1666485475442</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1666485475442</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,6 +174,8 @@
     <MESSAGE value="Implement UML Class Diagram" />
     <MESSAGE value="Refactor Player to be a Singleton" />
     <MESSAGE value="Add new interface for draw() to draw Enemy and Player more efficiently" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add new interface for draw() to draw Enemy and Player more efficiently" />
+    <MESSAGE value="Added AbstractCharacter and implemented moving for player" />
+    <MESSAGE value="Implement TODO 6" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement TODO 6" />
   </component>
 </project>

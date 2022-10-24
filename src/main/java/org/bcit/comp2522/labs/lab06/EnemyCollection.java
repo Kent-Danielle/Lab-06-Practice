@@ -15,6 +15,16 @@ public class EnemyCollection<T> implements Iterable<T> {
     this.list.add(enemy);
   }
 
+  public void remove(T enemy) {
+    this.list.remove(enemy);
+  }
+
+  public void clear() {
+    this.list.clear();
+  }
+
+  public int length() {return this.list.size();}
+
   @Override
   public EnemyIterator<T> iterator() {
     return new EnemyIterator<T>(this.list);
