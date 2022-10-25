@@ -45,7 +45,7 @@ public class Window extends PApplet {
     lastPowerUptime = new Date();
 
     // Init player as Singleton
-    float initPlayerPower = 3f;
+    float initPlayerPower = 5f;
     float initPlayerSpd = 1.5f;
     PVector playerPos = new PVector(width / 2f, height / 2f);
     PVector playerDir = new PVector(1, 1).normalize();
@@ -85,6 +85,7 @@ public class Window extends PApplet {
     characters.clear();
     deadEnemies.clear();
     collidables.clear();
+    player.getObservers().clear();
     setup();
   }
 
@@ -103,10 +104,10 @@ public class Window extends PApplet {
       if (now.getTime() - lastPowerUptime.getTime() > powerUpInterval) {
         lastPowerUptime = now;
         // TODO: Make up something so that the farther the enemy is on the iteration, the less power it receives
-        float x = 2f;
+        float x = 10f;
         for (Enemy e : enemies) {
           e.powerGain(x);
-          x /= 5f;
+          x /= 20f;
         }
       }
 
@@ -136,7 +137,7 @@ public class Window extends PApplet {
   }
 
   public void settings() {
-    size(1000, 1000);
+    size(500, 500);
   }
 
   public EnemyCollection<Enemy> getEnemies() {

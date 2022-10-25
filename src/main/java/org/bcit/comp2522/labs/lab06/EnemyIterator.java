@@ -13,7 +13,6 @@ public class EnemyIterator<Enemy> implements Iterator<Enemy> {
 
   public EnemyIterator(ArrayList<Enemy> list) {
     this.list = list;
-    this.list.sort(null);
     Collections.sort(list, new Comparator<Enemy>() {
       @Override
       public int compare(Enemy o1, Enemy o2) {

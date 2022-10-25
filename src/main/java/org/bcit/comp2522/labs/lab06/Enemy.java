@@ -34,6 +34,7 @@ public class Enemy extends Observer {
 
   @Override
   public void update(PVector p, float power) {
+    System.out.println("Enemy " + this.power + " | Player " + power);
     if (power >= this.power) {
       avoidPlayer(p);
     } else {

@@ -11,6 +11,10 @@ public class Player extends Observable {
   private float broadcastRadius = 50f;
   private ArrayList<Observer> observers;
 
+  public ArrayList<Observer> getObservers() {
+    return observers;
+  }
+
   private Player(float speed, float power, PVector pin, PVector dir, float din, Color cin, Window win) {
     super(speed, power, pin, dir, din, cin, win);
     this.observers = new ArrayList<Observer>();
